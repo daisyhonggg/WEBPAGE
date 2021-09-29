@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+@import url('w3slideshow.CSS');
+body {
+  font-family: 'Capriola', sans-serif;
+  background-image: url(../images/pretty-pastel-dawn-sunrise-hyams-beach.jpg);
+  background-repeat: repeat;
+  background-size: 1000px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+header {
+  position: relative;
+  z-index: 101;
+  height: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  background-color:#4e344a;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .logo {
+  color: #98caa0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+header .menu-button {
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+header .menu-button:focus span {
+  position: relative;
+  -webkit-transition: 0.5s 0.5s transform, 0.5s 0s top, 0.5s 0s left;
+  transition: 0.5s 0.5s transform, 0.5s 0s top, 0.5s 0s left;
+}
+
+header .menu-button:focus span:nth-child(1) {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+  top: 14px;
+}
+
+header .menu-button:focus span:nth-child(2) {
+  left: -100px;
+  opacity: 0;
+}
+
+header .menu-button:focus span:nth-child(3) {
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+  top: -14px;
+}
+
+header .menu-button span {
+  display: block;
+  position: relative;
+  height: 4px;
+  width: 40px;
+  background-color: #a87da1;
+  margin: 5px;
+  -webkit-transition: 0.5s 0s transform, 0.5s 0.5s top, 0.5s 0s left,
+    1s 1s opacity;
+  transition: 0.5s 0s transform, 0.5s 0.5s top, 0.5s 0s left, 1s 1s opacity;
+  top: 0;
+  left: 0;
+}
+
+header .invisible-button {
+  height: 42px;
+  width: 60px;
+  display: none;
+  position: absolute;
+  right: 20%;
+}
+
+header nav {
+  -webkit-transition: 0.2s 0.2s width, 0.2s 0s font-size,
+    0.2s 0.2s background-color;
+  transition: 0.2s 0.2s width, 0.2s 0s font-size, 0.2s 0.2s background-color;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 0.2s 0s all;
+  transition: 0.2s 0s all;
+}
+
+header nav ul li {
+  padding: 10px;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 5px 10px;
+  color: #C5E7E2;
+  text-decoration: none;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bootstrapSlider {
+  height: 100%;
+}
+
+.slide-container {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto 0px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-container .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  opacity: 1;
+}
+
+.slide-container .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.slide-container .slide:nth-child(6) {
+  -webkit-animation: fade 30s 0s infinite;
+  animation: fade 30s 0s infinite;
+  left: 0;
+}
+
+.slide-container .slide:nth-child(5) {
+  -webkit-animation: fade 30s 5s infinite;
+  animation: fade 30s 5s infinite;
+  left: 0;
+}
+
+.slide-container .slide:nth-child(4) {
+  -webkit-animation: fade 30s 10s infinite;
+  animation: fade 30s 10s infinite;
+  left: 0;
+}
+
+.slide-container .slide:nth-child(3) {
+  -webkit-animation: fade 30s 15s infinite;
+  animation: fade 30s 15s infinite;
+  left: 0;
+}
+
+.slide-container .slide:nth-child(2) {
+  -webkit-animation: fade 30s 20s infinite;
+  animation: fade 30s 20s infinite;
+  left: 0;
+}
+
+.slide-container .slide:nth-child(1) {
+  -webkit-animation: fade 30s 25s infinite;
+  animation: fade 30s 25s infinite;
+  left: 0;
+}
+.paragraph{
+  text-align: center;
+  margin: 30%;
+  font-size: 200%;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  header .menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .menu-button:focus ~ nav {
+    font-size: 2em;
+    width: 300px;
+    background-color: #4e344a;
+    -webkit-transition: 0.2s 0s all;
+    transition: 0.2s 0s all;
+  }
+  header .menu-button:focus ~ nav ul li {
+    padding: 10px;
+  }
+  header .menu-button:focus ~ .invisible-button {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  main {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .slide-container {
+    min-height: 400px;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    left: 0;
+    z-index: 100;
+  }
+  2% {
+    left: 100%;
+    z-index: 100;
+  }
+  79% {
+    left: 100%;
+    z-index: 1;
+  }
+  80% {
+    left: 0;
+  }
+  99% {
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    left: 0;
+    z-index: 100;
+  }
+  2% {
+    left: 100%;
+    z-index: 100;
+  }
+  79% {
+    left: 100%;
+    z-index: 1;
+  }
+  80% {
+    left: 0;
+  }
+  99% {
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  10% {
+    opacity: 0;
+    z-index: 100;
+  }
+  79% {
+    opacity: 0;
+    z-index: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  10% {
+    opacity: 0;
+    z-index: 100;
+  }
+  79% {
+    opacity: 0;
+    z-index: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

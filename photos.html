@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link type="TEXT/CSS" rel="STYLESHEET" href="styles/styles.CSS"/>
+    </head>
+    <body>
+    <header>
+        <DIV class="logo">SUNMIN'S LA PHOTO DIARY</DIV>
+        <div tabindex="1" class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="invisible-button"></div>
+        <nav>
+            <UL>
+                <LI><A href="index.html">HOME</A></LI>
+                <LI><A href="about.html">ABOUT</A></LI>
+                <LI><A href="photos.html">PHOTOS</A></LI>
+                <LI><A href="QnA.html">QNA</A></LI>
+                <LI><A href="contact.html">CONTACT</A></LI>
+            </UL>
+        </nav>
+    </header>  
+
+    <h1>Photo diary</h1>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides w3fade">
+        <div class="numbertext">1 / 4</div>
+        <img
+          src="images/echo.jpg"
+          style="width: 90%"
+        />
+        <div class="text">Echo park</div>
+      </div>
+
+      <div class="mySlides w3fade">
+        <div class="numbertext">2 / 4</div>
+        <img
+          src="images/venice.jpg"
+          style="width: 90%"
+        />
+        <div class="text">Venice beach</div>
+      </div>
+
+      <div class="mySlides w3fade">
+        <div class="numbertext">3 / 4</div>
+        <img
+          src="images/josua1.jpg"
+          style="width: 90%"
+        />
+        <div class="text">Josua tree 1</div>
+      </div>
+
+      <div class="mySlides w3fade">
+        <div class="numbertext">4 / 4</div>
+        <img
+          src="images/josua.JPG"
+          style="width: 90%"
+        />
+        <div class="text">Josua tree 2</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="w3prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="w3next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+      var w3slideIndex = 1;
+      w3showSlides(w3slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        w3showSlides((w3slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        w3showSlides((w3slideIndex = n));
+      }
+
+      function w3showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName('mySlides');
+        var dots = document.getElementsByClassName('dot');
+        if (n > slides.length) {
+          w3slideIndex = 1;
+        }
+        if (n < 1) {
+          w3slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[w3slideIndex - 1].style.display = 'block';
+        dots[w3slideIndex - 1].className += ' active';
+      }
+    </script>
+</html>
+   
